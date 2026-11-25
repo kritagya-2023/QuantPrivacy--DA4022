@@ -28,7 +28,7 @@ python make_midpoint_slide.py                  # -> DA4022_Midproject_Slide.pptx
 layout could be checked**. Run the two commands above before submitting — the slide
 reads every figure from `results.json`, so it rebuilds itself with your real results.
 
-## Phase 3 — final (due 26 Nov)
+## Phase 3 — final 
 
 ```bash
 python run_final.py --stage grid                        # minutes
@@ -39,19 +39,6 @@ python run_final.py --stage persample                   # seconds, needs grid
 ```
 
 Then write up `report/final_report.tex`.
-
-## Suggested schedule
-
-| When | What |
-|---|---|
-| by 10 Sep | proposal submitted, row claimed in the selection sheet |
-| mid Sep | `run_midpoint.py --smoke` passes on every member's machine |
-| late Sep | real 30-epoch target trained, FP32/FP16/INT8/INT4 scored |
-| 15 Oct | one-slide mid-project report submitted |
-| late Oct | shadow models trained (overnight), LiRA working |
-| early Nov | QFT arm + per-sample analysis, figures frozen |
-| mid Nov | report draft, PPT video recorded |
-| 26 Nov | report + video + code submitted |
 
 ## What each file does
 
@@ -80,7 +67,6 @@ finding worth stating.
 
 Always run 2-3 seeds before believing any gap between arms.
 
-## Two things to be honest about in the write-up
 
 1. **Simulated quantization does not speed anything up.** Weights are snapped to the
    INT8/INT4 grid but still stored and multiplied as FP32, so the low-bit arms have no
